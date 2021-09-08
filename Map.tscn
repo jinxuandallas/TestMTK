@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Map.gd" type="Script" id=1]
+[ext_resource path="res://Class/my_texture_rect.gd" type="Script" id=2]
+[ext_resource path="res://Map/41.jpg" type="Texture" id=3]
+[ext_resource path="res://Map/53.jpg" type="Texture" id=4]
+[ext_resource path="res://Map/39.jpg" type="Texture" id=5]
+[ext_resource path="res://Map/40.jpg" type="Texture" id=6]
+[ext_resource path="res://Map/51.jpg" type="Texture" id=7]
+[ext_resource path="res://Map/52.jpg" type="Texture" id=8]
+
+[node name="Map" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="MyTextureRect1" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 5 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MyTextureRect2" type="TextureRect" parent="."]
+margin_left = 1000.0
+margin_right = 2000.0
+margin_bottom = 1000.0
+texture = ExtResource( 6 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MyTextureRect3" type="TextureRect" parent="."]
+margin_left = 2000.0
+margin_right = 3000.0
+margin_bottom = 1000.0
+texture = ExtResource( 3 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MyTextureRect4" type="TextureRect" parent="."]
+margin_top = 1000.0
+margin_right = 1000.0
+margin_bottom = 2000.0
+texture = ExtResource( 7 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MyTextureRect5" type="TextureRect" parent="."]
+margin_left = 1000.0
+margin_top = 1000.0
+margin_right = 2000.0
+margin_bottom = 2000.0
+texture = ExtResource( 8 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MyTextureRect6" type="TextureRect" parent="."]
+margin_left = 2000.0
+margin_top = 1000.0
+margin_right = 3000.0
+margin_bottom = 2000.0
+texture = ExtResource( 4 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
