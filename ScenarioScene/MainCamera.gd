@@ -21,7 +21,7 @@ func _process(delta):
 #	var mouse_position=get_local_mouse_position()
 	var mouse_position=get_viewport().get_mouse_position()
 #	var mouse_position=get_global_mouse_positi on()
-	print(mouse_position)
+#	print(mouse_position)
 #	if mouse_position.x<CAMERA_MARGIN or mouse_position.x>screen_size.x-CAMERA_MARGIN \
 #	or mouse_position.y<CAMERA_MARGIN or mouse_position.y>screen_size.y-CAMERA_MARGIN:
 	var camera_translation = Vector2()
