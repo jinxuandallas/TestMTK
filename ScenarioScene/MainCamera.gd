@@ -18,22 +18,23 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
-	var mouse_position=get_local_mouse_position()
-#	var mouse_position=get_global_mouse_position()
+#	var mouse_position=get_local_mouse_position()
+	var mouse_position=get_viewport().get_mouse_position()
+#	var mouse_position=get_global_mouse_positi on()
 	print(mouse_position)
 #	if mouse_position.x<CAMERA_MARGIN or mouse_position.x>screen_size.x-CAMERA_MARGIN \
 #	or mouse_position.y<CAMERA_MARGIN or mouse_position.y>screen_size.y-CAMERA_MARGIN:
 	var camera_translation = Vector2()
-	if mouse_position.x<CAMERA_MARGIN-650:
+	if mouse_position.x<CAMERA_MARGIN:
 		camera_translation.x-=delta*SPEED*_zoom
 #			print("a")
-	if mouse_position.x>screen_size.x-CAMERA_MARGIN-650:
+	if mouse_position.x>screen_size.x-CAMERA_MARGIN:
 		camera_translation.x+=delta*SPEED*_zoom
 #			print("b")
-	if mouse_position.y<CAMERA_MARGIN-350:
+	if mouse_position.y<CAMERA_MARGIN:
 		camera_translation.y-=delta*SPEED*_zoom
 #			print("c")
-	if mouse_position.y>screen_size.y-CAMERA_MARGIN-350:
+	if mouse_position.y>screen_size.y-CAMERA_MARGIN:
 		camera_translation.y+=delta*SPEED*_zoom
 			
 	if camera_translation!=Vector2():
@@ -45,9 +46,9 @@ func _process(delta):
 func move_camera(position_offset: Vector2):
 	var size_x_half = get_viewport().size.x * _zoom / 2.0
 	var size_y_half = get_viewport().size.y * _zoom / 2.0
-	position.x = clamp(position.x + position_offset.x, size_x_half-650, MAP_SIZE_X - size_x_half)
+	position.x = clamp(position.x + position_offset.x, size_x_half, MAP_SIZE_X - size_x_half)
 	position.y = clamp(
-		position.y + position_offset.y, size_y_half-350, MAP_SIZE_Y - size_y_half
+		position.y + position_offset.y, size_y_half, MAP_SIZE_Y - size_y_half
 	)
 	
 #	print(position)
