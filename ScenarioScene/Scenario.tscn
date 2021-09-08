@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ScenarioScene/Map.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ScenarioScene/MainCamera.gd" type="Script" id=2]
+
+[node name="Scenario" type="Node"]
+
+[node name="Map" parent="." instance=ExtResource( 1 )]
+position = Vector2( 500, 500 )
+
+[node name="MainCamera" type="Camera2D" parent="."]
+position = Vector2( 700, 700 )
+current = true
+limit_left = 0
+limit_top = 0
+script = ExtResource( 2 )

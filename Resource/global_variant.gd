@@ -1,11 +1,6 @@
 extends Resource
 
-const MM=10
-export var b:=23
-var c=222
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+const CAMERA_MARGIN=50
 
 
 # Called when the node enters the scene tree for the first time.
