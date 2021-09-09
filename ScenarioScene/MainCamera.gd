@@ -4,7 +4,9 @@ const CAMERA_MARGIN=50
 const SPEED=1000
 const MAP_SIZE_X = 3 * 1000
 const MAP_SIZE_Y = 2 * 1000
-
+const MAX_ZOOM = 2.0
+const MIN_ZOOM = 1
+const ZOOM_PERIOD = 0.25
 
 var _zoom=1
 onready var screen_size = get_viewport_rect().size
@@ -17,6 +19,18 @@ onready var screen_size = get_viewport_rect().size
 func _ready():
 	pass # Replace with function body.
 
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.button_index==BUTTON_WHEEL_UP:
+			_zoom=clamp(_zoom-ZOOM_PERIOD,MIN_ZOOM,MAX_ZOOM)
+			zoom=Vector2(_zoom,_zoom)
+			move_camera(Vector2())
+		if event.button_index==BUTTON_WHEEL_DOWN:
+			_zoom=clamp(_zoom+ZOOM_PERIOD,MIN_ZOOM,MAX_ZOOM)
+			zoom=Vector2(_zoom,_zoom)
+			move_camera(Vector2())
+	
+	
 func _process(delta):
 #	var mouse_position=get_local_mouse_position()
 	var mouse_position=get_viewport().get_mouse_position()
@@ -38,7 +52,7 @@ func _process(delta):
 		camera_translation.y+=delta*SPEED*_zoom
 			
 	if camera_translation!=Vector2():
-		print(mouse_position)
+#		print(mouse_position)
 		move_camera(camera_translation)
 #			print("d")
 			
