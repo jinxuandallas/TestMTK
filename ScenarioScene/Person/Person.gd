@@ -1,6 +1,6 @@
 extends Node
 
-export var global_data:Resource=null
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -8,11 +8,9 @@ export var global_data:Resource=null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	_load_data(global_data.path)
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-func _load_data(path):
-	print(path)
