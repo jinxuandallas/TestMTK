@@ -15,4 +15,7 @@ func _ready():
 #func _process(delta):
 #	pass
 func _load_data(path):
-	print(path)
+	var file=File.new()
+	file.open(path+"/Persons.json",File.READ)
+	var json=parse_json(file.get_as_text())
+	file.close()
