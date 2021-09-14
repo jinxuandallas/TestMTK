@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "MyTextureRect",
 "language": "GDScript",
 "path": "res://Class/my_texture_rect.gd"
+}, {
+"base": "Node",
+"class": "Person",
+"language": "GDScript",
+"path": "res://ScenarioScene/Person/Person.gd"
 } ]
 _global_script_class_icons={
 "GitAPI": "",
-"MyTextureRect": ""
+"MyTextureRect": "",
+"Person": ""
 }
 
 [application]
