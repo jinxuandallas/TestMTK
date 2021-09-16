@@ -5,6 +5,7 @@ export var global_data:Resource=null
 # var a = 2
 # var b = "text"
 var persons:=Dictionary()
+var architectures:=Dictionary()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -23,6 +24,14 @@ func _load_data(path):
 		_load_item(instance,item,persons)
 	file.close()
 	
+	file.open(path+"/Architectures.json",File.READ)
+	json=parse_json(file.get_as_text())
+	for item in json:
+		var instance=Architecture.new()
+		_load_item(instance,item,architectures)
+	file.close()
+#	for p in persons:
+#		print("%s%s，字%s"%[persons[p].surname,persons[p].given_name,persons[p].courtesy_name])
 #	print(persons)
 
 func _load_item(instance,item,add_to_list):

@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "Architecture",
+"language": "GDScript",
+"path": "res://ScenarioScene/Architecture/Architecture.gd"
+}, {
 "base": "",
 "class": "GitAPI",
 "language": "NativeScript",
@@ -25,6 +30,7 @@ _global_script_classes=[ {
 "path": "res://ScenarioScene/Person/Person.gd"
 } ]
 _global_script_class_icons={
+"Architecture": "",
 "GitAPI": "",
 "MyTextureRect": "",
 "Person": ""
