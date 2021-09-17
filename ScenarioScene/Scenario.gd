@@ -24,10 +24,24 @@ func _load_data(path):
 		_load_item(instance,item,persons)
 	file.close()
 	
+	file.open(path+"/Biographies.json",File.READ)
+	json=parse_json(file.get_as_text())
+	for item in json:
+		var instance=Biography.new()
+		_load_item(instance,item,architectures)
+	file.close()
+	
 	file.open(path+"/Architectures.json",File.READ)
 	json=parse_json(file.get_as_text())
 	for item in json:
 		var instance=Architecture.new()
+		_load_item(instance,item,architectures)
+	file.close()
+	
+	file.open(path+"/Jun.json",File.READ)
+	json=parse_json(file.get_as_text())
+	for item in json:
+		var instance=Jun.new()
 		_load_item(instance,item,architectures)
 	file.close()
 #	for p in persons:
