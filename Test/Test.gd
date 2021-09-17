@@ -14,6 +14,7 @@ func _ready():
 #	print(dataResource.c)
 	
 	dataResource.b=66
+	
 	get_tree().change_scene("res://Test/Test2.tscn")
 
 

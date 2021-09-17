@@ -38,6 +38,11 @@ _global_script_classes=[ {
 "class": "Person",
 "language": "GDScript",
 "path": "res://ScenarioScene/Person/Person.gd"
+}, {
+"base": "Resource",
+"class": "g_resource",
+"language": "GDScript",
+"path": "res://Test/new_gdscript.gd"
 } ]
 _global_script_class_icons={
 "Architecture": "",
@@ -45,7 +50,8 @@ _global_script_class_icons={
 "GitAPI": "",
 "Jun": "",
 "MyTextureRect": "",
-"Person": ""
+"Person": "",
+"g_resource": ""
 }
 
 [application]

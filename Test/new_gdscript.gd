@@ -1,2 +1,5 @@
+extends Resource
+class_name g_resource
+
 const MM=10
-export var b:=23
+var b:=23

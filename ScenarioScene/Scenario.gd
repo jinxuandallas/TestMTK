@@ -47,7 +47,16 @@ func _load_data(path):
 #	for p in persons:
 #		print("%s%s，字%s"%[persons[p].surname,persons[p].given_name,persons[p].courtesy_name])
 #	print(persons)
+	
 
+	for i in 3:
+		for j in 2:
+			file.open("res://json/Map/%d.json"%(39+i+j*12),File.READ)
+			for k in 20:
+				pass
+			file.close()
+	
+	
 func _load_item(instance,item,add_to_list):
 	instance.load_data(item)
 	add_to_list[instance.id]=instance
