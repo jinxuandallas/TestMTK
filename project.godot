@@ -60,6 +60,10 @@ config/name="Test Mtk"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SharedData="*res://SharedData.gd"
+
 [display]
 
 window/size/width=1300
