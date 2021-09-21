@@ -8,6 +8,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 __meta__ = {
+"_edit_horizontal_guides_": [  ],
 "_edit_use_anchors_": false
 }
 
@@ -18,3 +19,21 @@ margin_right = 969.294
 margin_bottom = 666.814
 custom_fonts/font = ExtResource( 2 )
 text = "显示网格"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 610.461
+margin_top = 627.159
+margin_right = 730.461
+margin_bottom = 667.159
+color = Color( 0.101961, 0.262745, 0.811765, 1 )
+
+[node name="TileInfo" type="Label" parent="ColorRect"]
+margin_right = 120.0
+margin_bottom = 40.0
+custom_fonts/font = ExtResource( 2 )
+text = "草原（123,456）"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,4 +1,7 @@
 extends Node
+class_name Scenario
+
+signal mouse_moved_to_map_position(terrain,position)
 
 export var global_data:Resource=null
 # Declare member variables here. Examples:
@@ -6,11 +9,12 @@ export var global_data:Resource=null
 # var b = "text"
 var persons:=Dictionary()
 var architectures:=Dictionary()
+var jun:=Dictionary()
+var biographies:=Dictionary()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_load_data(global_data.path)
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -28,7 +32,7 @@ func _load_data(path):
 	json=parse_json(file.get_as_text())
 	for item in json:
 		var instance=Biography.new()
-		_load_item(instance,item,architectures)
+		_load_item(instance,item,biographies)
 	file.close()
 	
 	file.open(path+"/Architectures.json",File.READ)
@@ -42,11 +46,13 @@ func _load_data(path):
 	json=parse_json(file.get_as_text())
 	for item in json:
 		var instance=Jun.new()
-		_load_item(instance,item,architectures)
+		_load_item(instance,item,jun)
 	file.close()
 #	for p in persons:
 #		print("%s%s，字%s"%[persons[p].surname,persons[p].given_name,persons[p].courtesy_name])
-#	print(persons)
+#	for arc in architectures:
+#		print(str(arc)+ architectures[arc].architecture_name)
+#		print(architectures[arc].persons)
 	
 
 #	for i in 3:

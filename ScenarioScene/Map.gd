@@ -31,7 +31,6 @@ func _physics_process(delta):
 #	print(get_global_mouse_position(),current_grid,_CurrentGrid.rect_position)
 #	_CurrentGrid.show()
 	
-	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

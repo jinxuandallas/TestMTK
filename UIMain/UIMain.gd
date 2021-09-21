@@ -9,7 +9,8 @@ extends Control
 func _ready():
 	pass # Replace with function body.
 
-
+func _on_mouse_moved_to_map_position(terrain,position):
+	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

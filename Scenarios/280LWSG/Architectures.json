@@ -483,7 +483,15 @@
 		"MapPosition": [
 			115,
 			81
-		]
+		],
+		"Agriculture": 200,
+		"Commerce": 200,
+		"Endurance": 400,
+		"Food": 20000,
+		"Fund": 1200,
+		"Population": 30000,
+		"PersonsString": "",
+		"Support": 50
 	},
 	{
 		"Id": 24,
