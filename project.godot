@@ -44,6 +44,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://ScenarioScene/Scenario.gd"
 }, {
+"base": "Node",
+"class": "Terrain",
+"language": "GDScript",
+"path": "res://ScenarioScene/Terrain/Terrain.gd"
+}, {
 "base": "Resource",
 "class": "g_resource",
 "language": "GDScript",
@@ -57,6 +62,7 @@ _global_script_class_icons={
 "MyTextureRect": "",
 "Person": "",
 "Scenario": "",
+"Terrain": "",
 "g_resource": ""
 }
 

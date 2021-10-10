@@ -1,7 +1,7 @@
 extends Node
 class_name Scenario
 
-signal mouse_moved_to_map_position(terrain,position)
+#signal mouse_moved_to_map_position(terrain,position)
 
 export var global_data:Resource=null
 # Declare member variables here. Examples:
@@ -11,6 +11,7 @@ var persons:=Dictionary()
 var architectures:=Dictionary()
 var jun:=Dictionary()
 var biographies:=Dictionary()
+var terrains:=Dictionary()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -47,6 +48,14 @@ func _load_data(path):
 	for item in json:
 		var instance=Jun.new()
 		_load_item(instance,item,jun)
+	file.close()
+	
+	file.open("res://Json/Terrain.json",File.READ)
+#	print(file.file_exists("res://Json/Terrain.json"))
+	json=parse_json(file.get_as_text())
+	for item in json:
+		var instance=Terrain.new()
+		_load_item(instance,item,terrains)
 	file.close()
 #	for p in persons:
 #		print("%s%s，字%s"%[persons[p].surname,persons[p].given_name,persons[p].courtesy_name])

@@ -21,6 +21,8 @@ func _load_map_data():
 	# 生成一个空的map_data方便往里面添加数据
 	map_data.clear()
 	
+	# map_data的格式是纵坐标有两行瓦片地图，每个瓦片地图里有20行纵坐标
+	# 每一行包括20*3个横坐标数据
 	for j in 2:
 		for k in 20:
 			var row=Array()
