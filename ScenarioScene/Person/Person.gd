@@ -24,6 +24,7 @@ var ideal:int
 var p_character:int
 var available_location:int
 
+var scenario
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
