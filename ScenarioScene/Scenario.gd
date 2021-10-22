@@ -11,7 +11,7 @@ var persons:=Dictionary()
 var architectures:=Dictionary()
 var jun:=Dictionary()
 var biographies:=Dictionary()
-var terrains:=Dictionary()
+#var terrains:=Dictionary()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -50,13 +50,13 @@ func _load_data(path):
 		_load_item(instance,item,jun)
 	file.close()
 	
-	file.open("res://Json/Terrain.json",File.READ)
-#	print(file.file_exists("res://Json/Terrain.json"))
-	json=parse_json(file.get_as_text())
-	for item in json:
-		var instance=Terrain.new()
-		_load_item(instance,item,terrains)
-	file.close()
+#	file.open("res://Json/Terrain.json",File.READ)
+##	print(file.file_exists("res://Json/Terrain.json"))
+#	json=parse_json(file.get_as_text())
+#	for item in json:
+#		var instance=Terrain.new()
+#		_load_item(instance,item,terrains)
+#	file.close()
 #	for p in persons:
 #		print("%s%s，字%s"%[persons[p].surname,persons[p].given_name,persons[p].courtesy_name])
 #	for arc in architectures:

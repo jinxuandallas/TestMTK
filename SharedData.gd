@@ -1,6 +1,7 @@
 extends Node
 
 var map_data:Array
+var terrains:=Dictionary()
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -40,6 +41,13 @@ func _load_map_data():
 				map_data[j*20+k].append_array(json[str(k+1)])
 #				map_data[j*20+k].append_array([1,2,3])
 			file.close()
+			
+	file.open("res://Json/Terrain.json",File.READ)
+#	print(file.file_exists("res://Json/Terrain.json"))
+	json=parse_json(file.get_as_text())
+	for item in json:
+		terrains[int(item["Id"])]=item["Name"]
+	file.close()
 #	map_data[3].append(6)
 #	map_data[6].append_array([7,9])
 #	print(map_data)
