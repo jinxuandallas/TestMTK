@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://UIMain/UIMain.gd" type="Script" id=1]
 [ext_resource path="res://Font/game_dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://UIMain/ArchitectureDetail/ArchitectureDetail.tscn" type="PackedScene" id=3]
 
 [node name="UIMain" type="Control"]
 anchor_right = 1.0
@@ -37,3 +38,6 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ArchitectureDetail" parent="." instance=ExtResource( 3 )]
+visible = false

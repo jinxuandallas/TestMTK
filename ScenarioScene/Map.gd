@@ -44,7 +44,8 @@ func _input(event):
 		if event.button_index == BUTTON_LEFT and event.pressed:
 			var current_grid=event.global_position/50
 			if SharedData.map_data[current_grid.y][current_grid.x]==8: # 如果当前的瓦片地图类型是城堡
-				emit_signal("architecture_clicked", self, event.global_position.x, event.global_position.y, false)
+#				emit_signal("architecture_clicked", self, event.global_position.x, event.global_position.y, false)
+				emit_signal("architecture_clicked")
 #			get_tree().set_input_as_handled()
 #		elif event.button_index == BUTTON_RIGHT and event.pressed:
 #			call_deferred("emit_signal", "architecture_clicked", self, event.global_position.x, event.global_position.y, true)
