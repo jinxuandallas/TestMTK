@@ -41,3 +41,8 @@ __meta__ = {
 
 [node name="ArchitectureDetail" parent="." instance=ExtResource( 3 )]
 visible = false
+anchor_right = 300.0
+margin_left = 250.0
+margin_top = 100.0
+margin_right = -388950.0
+margin_bottom = 500.0

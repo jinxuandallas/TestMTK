@@ -24,10 +24,10 @@ func _ready():
 					_Grids.add_child(grid)
 
 func _physics_process(delta):
-	var current_grid=get_global_mouse_position()/50
+#	var current_grid=get_global_mouse_position()/50
 #	print(current_grid)
-	var coordinate=Vector2(floor(current_grid.x),floor(current_grid.y))
-	current_grid=coordinate*50
+	var coordinate=get_mouse_coordinate()
+	var current_grid=coordinate*50
 #	print(current_grid)
 #	var current_grid=Vector2()
 #	print(get_global_mouse_position(),current_grid)
@@ -42,8 +42,11 @@ func _physics_process(delta):
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:
-			var current_grid=event.global_position/50
-			if SharedData.map_data[current_grid.y][current_grid.x]==8: # 如果当前的瓦片地图类型是城堡
+#			var current_grid=get_global_mouse_position()/50
+#			var coordinate=Vector2(floor(current_grid.x),floor(current_grid.y))
+			var coordinate=get_mouse_coordinate()
+#			print(coordinate,SharedData.map_data[coordinate.y][coordinate.x])
+			if SharedData.map_data[coordinate.y][coordinate.x]==8: # 如果当前的瓦片地图类型是城堡
 #				emit_signal("architecture_clicked", self, event.global_position.x, event.global_position.y, false)
 				emit_signal("architecture_clicked")
 #			get_tree().set_input_as_handled()
@@ -55,3 +58,7 @@ func _input(event):
 func _on_map_grid_pressed():
 	_Grids.visible=!_Grids.visible
 	
+func get_mouse_coordinate():
+	var current_grid=get_global_mouse_position()/50
+	var coordinate=Vector2(floor(current_grid.x),floor(current_grid.y))
+	return coordinate

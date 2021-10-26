@@ -1,4 +1,4 @@
-extends Panel
+extends WindowDialog
 
 
 # Declare member variables here. Examples:
@@ -10,6 +10,12 @@ extends Panel
 func _ready():
 	pass # Replace with function body.
 
-
+#func _input(event):
+#	pass
+#	if event is InputEventMouseButton:
+#		if event.button_index == BUTTON_RIGHT and event.pressed:
+#			hide()
+			
 func show_menu():
-	show()
+#	show()
+	popup_centered()
