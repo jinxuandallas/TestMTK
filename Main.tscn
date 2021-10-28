@@ -12,3 +12,9 @@ script = ExtResource( 3 )
 [node name="UICanvas" type="CanvasLayer" parent="."]
 
 [node name="UIMain" parent="UICanvas" instance=ExtResource( 2 )]
+
+[connection signal="mouse_entered" from="UICanvas/UIMain/ArchitectureDetail" to="Scenario/Map" method="_on_UI_mouse_entered"]
+[connection signal="mouse_exited" from="UICanvas/UIMain/ArchitectureDetail" to="Scenario/Map" method="_on_UI_mouse_exited"]
+
+[editable path="Scenario"]
+[editable path="UICanvas/UIMain"]

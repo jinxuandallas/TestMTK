@@ -9,6 +9,8 @@ signal architecture_clicked
 # var b = "text"
 onready var _CurrentGrid=$CurrentGrid
 onready var _Grids=$Grids
+onready var in_map=true
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for i in 3:
@@ -26,21 +28,22 @@ func _ready():
 func _physics_process(delta):
 #	var current_grid=get_global_mouse_position()/50
 #	print(current_grid)
-	var coordinate=get_mouse_coordinate()
-	var current_grid=coordinate*50
+	if in_map: # 考虑还是要有这个in_map的判断，因为如果没有这个判断鼠标在ui上点了以后有可能触发地图上的事件
+		var coordinate=get_mouse_coordinate()
+		var current_grid=coordinate*50
 #	print(current_grid)
 #	var current_grid=Vector2()
 #	print(get_global_mouse_position(),current_grid)
-	_CurrentGrid.rect_position=current_grid
+		_CurrentGrid.rect_position=current_grid
 #	print(get_global_mouse_position(),current_grid,_CurrentGrid.rect_position)
 #	_CurrentGrid.show()
-	emit_signal("mouse_moved_to_map_position",coordinate)
+		emit_signal("mouse_moved_to_map_position",coordinate)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
 func _input(event):
-	if event is InputEventMouseButton:
+	if event is InputEventMouseButton and in_map:
 		if event.button_index == BUTTON_LEFT and event.pressed:
 #			var current_grid=get_global_mouse_position()/50
 #			var coordinate=Vector2(floor(current_grid.x),floor(current_grid.y))
@@ -62,3 +65,12 @@ func get_mouse_coordinate():
 	var current_grid=get_global_mouse_position()/50
 	var coordinate=Vector2(floor(current_grid.x),floor(current_grid.y))
 	return coordinate
+
+
+func _on_UI_mouse_entered():
+	in_map=false
+	_CurrentGrid.hide()
+
+func _on_UI_mouse_exited():
+	in_map=true
+	_CurrentGrid.show()
