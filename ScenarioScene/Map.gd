@@ -51,7 +51,7 @@ func _input(event):
 #			print(coordinate,SharedData.map_data[coordinate.y][coordinate.x])
 			if SharedData.map_data[coordinate.y][coordinate.x]==8: # 如果当前的瓦片地图类型是城堡
 #				emit_signal("architecture_clicked", self, event.global_position.x, event.global_position.y, false)
-				emit_signal("architecture_clicked")
+				emit_signal("architecture_clicked",coordinate)
 #			get_tree().set_input_as_handled()
 #		elif event.button_index == BUTTON_RIGHT and event.pressed:
 #			call_deferred("emit_signal", "architecture_clicked", self, event.global_position.x, event.global_position.y, true)

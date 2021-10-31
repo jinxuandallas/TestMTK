@@ -20,6 +20,8 @@ var population:int
 var persons:Array
 var support:int
 
+var scenario
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -44,3 +46,10 @@ func load_data(json:Dictionary):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func get_name()->String:
+	return architecture_name
+	
+func get_jun_name()->String:
+	return jun
+

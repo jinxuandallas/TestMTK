@@ -75,6 +75,7 @@ config/icon="res://icon.png"
 [autoload]
 
 SharedData="*res://SharedData.gd"
+ScenarioUtil="*res://ScenarioUtil.gd"
 
 [display]
 
@@ -84,6 +85,11 @@ window/size/height=700
 [gdnative]
 
 singletons=[ "res://git_api.gdnlib" ]
+
+[gui]
+
+theme/custom="res://Resource/default_theme.tres"
+theme/custom_font="res://Font/FZKT_dynamicfont_m.tres"
 
 [physics]
 

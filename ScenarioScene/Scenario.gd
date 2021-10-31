@@ -72,5 +72,8 @@ func _load_data(path):
 #			file.close()
 	
 func _load_item(instance,item,add_to_list):
+	if instance.has_meta("scenario"):
+		instance.scenario=self
+		
 	instance.load_data(item)
 	add_to_list[instance.id]=instance

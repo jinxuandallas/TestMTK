@@ -16,8 +16,7 @@ func _ready():
 	
 
 func _register_architecture_ui():
-	$Scenario/Map.connect("architecture_clicked",$UICanvas/UIMain/ArchitectureDetail,"show_menu")
-	pass
+	$Scenario/Map.connect("architecture_clicked",$UICanvas/UIMain/ArchitectureDetail,"_on_ArchitectureDetail_clicked",[$Scenario])
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
