@@ -5,6 +5,7 @@
 [ext_resource path="res://Font/FZKT_dynamicfont_bm.tres" type="DynamicFont" id=3]
 
 [node name="ArchitectureDetail" type="WindowDialog"]
+visible = true
 margin_right = 800.0
 margin_bottom = 400.0
 script = ExtResource( 1 )
@@ -64,13 +65,139 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Base" type="VBoxContainer" parent="VBoxContainer/CenterContainer/TabContainer"]
+[node name="Base" type="MarginContainer" parent="VBoxContainer/CenterContainer/TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 36.0
 margin_right = -4.0
 margin_bottom = -4.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/CenterContainer/TabContainer/Base"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 762.0
+margin_bottom = 290.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer"]
+margin_right = 120.0
+margin_bottom = 280.0
+rect_min_size = Vector2( 120, 0 )
+custom_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer"]
+margin_right = 120.0
+margin_bottom = 18.0
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer/HBoxContainer"]
+margin_right = 48.0
+margin_bottom = 18.0
+text = "农业："
+
+[node name="Agriculture" type="Label" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 52.0
+margin_right = 52.0
+margin_bottom = 18.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer"]
+margin_top = 28.0
+margin_right = 120.0
+margin_bottom = 46.0
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer/HBoxContainer2"]
+margin_right = 48.0
+margin_bottom = 18.0
+text = "商业："
+
+[node name="Commerce" type="Label" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 52.0
+margin_right = 52.0
+margin_bottom = 18.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer"]
+margin_top = 56.0
+margin_right = 120.0
+margin_bottom = 74.0
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer/HBoxContainer3"]
+margin_right = 48.0
+margin_bottom = 18.0
+text = "耐久："
+
+[node name="Endurance" type="Label" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 52.0
+margin_right = 52.0
+margin_bottom = 18.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer"]
+margin_left = 124.0
+margin_right = 244.0
+margin_bottom = 280.0
+rect_min_size = Vector2( 120, 0 )
+custom_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer2"]
+margin_right = 120.0
+margin_bottom = 18.0
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer2/HBoxContainer"]
+margin_right = 48.0
+margin_bottom = 18.0
+text = "兵粮："
+
+[node name="Food" type="Label" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer2/HBoxContainer"]
+margin_left = 52.0
+margin_right = 52.0
+margin_bottom = 18.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer2"]
+margin_top = 28.0
+margin_right = 120.0
+margin_bottom = 46.0
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer2/HBoxContainer2"]
+margin_right = 48.0
+margin_bottom = 18.0
+text = "资金："
+
+[node name="Fund" type="Label" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer2/HBoxContainer2"]
+margin_left = 52.0
+margin_right = 52.0
+margin_bottom = 18.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer2"]
+margin_top = 56.0
+margin_right = 120.0
+margin_bottom = 74.0
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer2/HBoxContainer3"]
+margin_right = 48.0
+margin_bottom = 18.0
+text = "人口："
+
+[node name="Population" type="Label" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer2/HBoxContainer3"]
+margin_left = 52.0
+margin_right = 52.0
+margin_bottom = 18.0
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer2"]
+margin_top = 84.0
+margin_right = 120.0
+margin_bottom = 102.0
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer2/HBoxContainer4"]
+margin_right = 48.0
+margin_bottom = 18.0
+text = "民心："
+
+[node name="Support" type="Label" parent="VBoxContainer/CenterContainer/TabContainer/Base/HBoxContainer/VBoxContainer2/HBoxContainer4"]
+margin_left = 52.0
+margin_right = 52.0
+margin_bottom = 18.0
 
 [node name="Control2" type="Control" parent="VBoxContainer/CenterContainer/TabContainer"]
 visible = false
